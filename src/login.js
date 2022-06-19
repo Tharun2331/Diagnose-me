@@ -2,8 +2,8 @@ import React,{useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import Axios from "axios";
 import "./login.css";
-import CustomButton from "../../custombutton/custombutton";
-import CustomInput from "../../customInput/customInputs";
+import CustomButton from "../custombutton/custombutton";
+import CustomInput from "../customInput/customInputs";
 
 function Login() {
 
@@ -99,12 +99,13 @@ return (
   </head>
   <body>
   <div class="wrapper">
-  <div class="containers">
+  <div class="container">
     <div class="sign-in-container">
     <form class="form">
         <h1>LOGIN</h1>
         <div class="login_headline">
-          <h3>Welcome back.</h3> 
+          <h3 style={{"marginLeft": "25%"}}>Welcome back.</h3> 
+          <h3>REACH TO MILLIONS IN A BLINK</h3>
         </div>
         <div style={{"marginBottom": "3%"}}>
           <CustomInput type="email" placeholder="email" className="custom_input" name="name" callback={emailCallback}/>

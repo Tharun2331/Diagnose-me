@@ -1,26 +1,37 @@
 import React from 'react';
 import { Parallax } from "react-parallax";
 import './home.css';
-
+import Carousel from 'react-bootstrap/Carousel';
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props
-const image1= "https://www.elmanretina.com/wp-content/uploads/shutterstock_657947524-1024x700.jpg";
-const image2= "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/08/26/10/41/ds00283_im00143_r7_openanglethu_jpg.jpg";
-const image3 = "https://www.visioncenter.org/wp-content/uploads/2020/07/Macular-Degeneration-1024x535.jpg";
 
 
 function Home() {
     return(
-    <div style={{textAlign:'center',backgroundColor:"black"}}> 
-        {/* <img src= "https://www.visioncenter.org/wp-content/uploads/2020/07/Macular-Degeneration-1024x535.jpg" width="1500" height ="700" /> */}
-        <Parallax className='home' bgImage={ image1 } strength={200}>
-        </Parallax>
-        <h1>| | |</h1>
-        <Parallax className='home' bgImage={ image2 } strength={200}>
-        </Parallax>
-        <h1>| | |</h1>
-        <Parallax className='home' bgImage={ image3 } strength={200}>
-        </Parallax>
-    </div>
+        <Carousel fade>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="http://www.eyeiq.net/media/cds/eyeiq/moneyBasics/3438/images/1130x591-blog-diabetic-retinopathy.png"
+            alt="First slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.inmedpharma.com/wp-content/uploads/2020/05/Glaucoma-compared-to-normal-vision.png"
+            alt="Second slide"
+          />
+      
+
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.drugwatch.com/wp-content/uploads/Degenerated-Macula-1.jpg"
+            alt="Third slide"
+          />
+        </Carousel.Item>
+      </Carousel>
 );  
 }
 
